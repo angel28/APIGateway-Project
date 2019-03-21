@@ -1,0 +1,70 @@
+ I have already taken the generic structure of the policy what I have to add
+
+
+When I post that generic structure I'm getting the following response with a new id.
+
+POST---http://localhost:5555/rest/apigateway/policyActions
+
+
+
+{
+    "policyAction": {
+        "id": "96d08056-ad33-4c5d-bfb7-debf9dbe3c7e",
+        "names": [
+            {
+                "value": "Identify & Authorize Application",
+                "locale": "en"
+            }
+        ],
+        "templateKey": "evaluatePolicy",
+        "parameters": [
+            {
+                "templateKey": "logicalConnector",
+                "values": [
+                    "OR"
+                ]
+            },
+            {
+                "templateKey": "allowAnonymous",
+                "values": [
+                    "false"
+                ]
+            },
+            {
+                "templateKey": "IdentificationRule",
+                "parameters": [
+                    {
+                        "templateKey": "applicationLookup",
+                        "values": [
+                            "strict"
+                        ]
+                    },
+                    {
+                        "templateKey": "identificationType",
+                        "values": [
+                            "apiKey"
+                        ]
+                    }
+                ]
+            },
+            {
+                "templateKey": "IdentificationRule",
+                "parameters": [
+                    {
+                        "templateKey": "applicationLookup",
+                        "values": [
+                            "strict"
+                        ]
+                    },
+                    {
+                        "templateKey": "identificationType",
+                        "values": [
+                            "httpBasicAuth"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "active": false
+    }
+}

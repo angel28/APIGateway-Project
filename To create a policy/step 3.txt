@@ -1,0 +1,58 @@
+
+
+        
+
+
+{
+    "policy": {
+        "id": "18821d71-5b36-46f0-bd26-c40bf8e5208a",
+        "names": [
+            {
+                "value": "Default Policy for API MessengerApi",
+                "locale": "English"
+            }
+        ],
+        "descriptions": [
+            {
+                "value": "",
+                "locale": "English"
+            }
+        ],
+        "scope": {
+            "scopeConditions": []
+        },
+        "policyEnforcements": [
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "a8400f80-e08f-4f4e-bdd9-9241e9a60cf9",
+                        "order": null
+                    }
+                ],
+                "stageKey": "routing"
+            },
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "6edb3871-639b-42ae-ac0f-9bda40e2ba73",
+                        "order": null
+                    }
+                ],
+                "stageKey": "IAM"
+            },
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "e2944292-e8ab-4b4e-a970-2285170e46d2",
+                        "order": null
+                    }
+                ],
+                "stageKey": "transport"
+            }
+        ],
+        "policyScope": "SERVICE",
+        "global": false,
+        "active": false,
+        "systemPolicy": false
+    }
+}

@@ -1,0 +1,231 @@
+
+  GET--      http://localhost:5555/rest/apigateway/apis/72e18d0b-2800-4e67-950b-5c81b57c97ee
+
+
+
+
+
+{
+    "apiResponse": {
+        "api": {
+            "apiDefinition": {
+                "type": "rest",
+                "info": {
+                    "version": "1.0",
+                    "title": "MessengerApi"
+                },
+                "serviceRegistryDisplayName": "API_Gateway_Messenger_Service",
+                "schemes": [],
+                "security": [],
+                "paths": {
+                    "/messages": {
+                        "get": {
+                            "description": "The method retrieves a list of available employees in API Gateway.\n",
+                            "operationId": "getAllMessages",
+                            "responses": {
+                                "200": {
+                                    "description": "This status code indicates that a list of the available employees are retrieved successfully.\n",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                },
+                                "401": {
+                                    "description": "This status code indicates that either user didn't provide right credentials or user doesn't have required privileges to access this API.\n",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                }
+                            },
+                            "mockedResponses": {},
+                            "mockedConditionsBasedCustomResponsesList": [],
+                            "enabled": true,
+                            "scopes": [],
+                            "requestBody": {
+                                "content": {},
+                                "name": "getAllMessages"
+                            }
+                        },
+                        "post": {
+                            "description": "The method creates an employee details in API Gateway.\n",
+                            "operationId": "addMessage",
+                            "responses": {
+                                "200": {
+                                    "description": "This status code indicates that the employee details  has been successfully created in API Gateway.\n",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                },
+                                "400": {
+                                    "description": "This status code indicates that an employee detail with the given ID already exists in API Gateway\n",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                },
+                                "401": {
+                                    "description": "This status code indicates that either user didn't provide right credentials or user doesn't have required privileges to access this API.\n",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                }
+                            },
+                            "mockedResponses": {},
+                            "mockedConditionsBasedCustomResponsesList": [],
+                            "enabled": true,
+                            "scopes": [],
+                            "requestBody": {
+                                "content": {},
+                                "name": "addMessage"
+                            }
+                        },
+                        "scopes": [],
+                        "displayName": "crudrestfulAPI",
+                        "enabled": true
+                    },
+                    "/messages/{messageID}": {
+                        "get": {
+                            "description": "The method retrieves the details of an employee in API Gateway.\n",
+                            "operationId": "getMessage",
+                            "responses": {
+                                "200": {
+                                    "description": "This status code indicates that the details of the alias are successfully retrieved.\n",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                },
+                                "401": {
+                                    "description": "This status code indicates that either user didn't provide right credentials or user doesn't have required privileges to access this API.\n",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                },
+                                "404": {
+                                    "description": "This status code indicates that an employee details with the given id could not be found in API Gateway.\n",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                }
+                            },
+                            "mockedResponses": {},
+                            "mockedConditionsBasedCustomResponsesList": [],
+                            "enabled": true,
+                            "scopes": [],
+                            "requestBody": {
+                                "content": {},
+                                "name": "getMessage"
+                            }
+                        },
+                        "put": {
+                            "responses": {},
+                            "mockedResponses": {},
+                            "mockedConditionsBasedCustomResponsesList": [],
+                            "enabled": true,
+                            "scopes": [],
+                            "requestBody": {
+                                "content": {},
+                                "name": "requestBody"
+                            }
+                        },
+                        "delete": {
+                            "responses": {},
+                            "mockedResponses": {},
+                            "mockedConditionsBasedCustomResponsesList": [],
+                            "enabled": true,
+                            "scopes": [],
+                            "requestBody": {
+                                "content": {},
+                                "name": "requestBody"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "messageID",
+                                "parameterSchema": {
+                                    "type": "string"
+                                },
+                                "required": false,
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "type": "string"
+                            }
+                        ],
+                        "scopes": [],
+                        "displayName": "/crudrestfulAPI1",
+                        "enabled": true
+                    }
+                },
+                "securityDefinitions": {},
+                "definitions": {},
+                "parameters": {},
+                "baseUriParameters": [],
+                "externalDocs": [],
+                "servers": [
+                    {
+                        "url": "http://localhost:8080/crudrestfulAPI/webapi",
+                        "variables": {}
+                    }
+                ],
+                "components": {
+                    "schemas": {},
+                    "responses": {},
+                    "parameters": {},
+                    "examples": {},
+                    "requestBodies": {},
+                    "headers": {},
+                    "links": {},
+                    "callbacks": {}
+                }
+            },
+            "nativeEndpoint": [
+                {
+                    "passSecurityHeaders": true,
+                    "uri": "http://localhost:8080/crudrestfulAPI/webapi",
+                    "connectionTimeoutDuration": 0,
+                    "alias": false
+                }
+            ],
+            "apiName": "MessengerApi",
+            "apiVersion": "1.0",
+            "maturityState": "Beta",
+            "isActive": true,
+            "type": "REST",
+            "owner": "Administrator",
+            "policies": [
+                "18821d71-5b36-46f0-bd26-c40bf8e5208a"
+            ],
+            "scopes": [],
+            "publishedPortals": [],
+            "creationDate": "2019-03-19 14:00:57 GMT",
+            "lastModified": "2019-03-21 11:40:49 GMT",
+            "systemVersion": 1,
+            "id": "72e18d0b-2800-4e67-950b-5c81b57c97ee"
+        },
+        "responseStatus": "SUCCESS",
+        "gatewayEndPoints": [
+            "http://SAG-3HYB152:5555/gateway/MessengerApi/1.0"
+        ],
+        "versions": [
+            {
+                "versionNumber": "1.0",
+                "apiId": "72e18d0b-2800-4e67-950b-5c81b57c97ee"
+            }
+        ]
+    }
+}

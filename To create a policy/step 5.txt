@@ -1,0 +1,118 @@
+I have copied the new id which is created in step 4.
+
+PUT--http://localhost:5555/rest/apigateway/policies/18821d71-5b36-46f0-bd26-c40bf8e5208a
+
+REQUEST PAYLOAD 
+
+{
+    "policy": {
+        "id": "18821d71-5b36-46f0-bd26-c40bf8e5208a",
+        "names": [
+            {
+                "value": "Default Policy for API MessengerApi",
+                "locale": "English"
+            }
+        ],
+        "descriptions": [
+            {
+                "value": "",
+                "locale": "English"
+            }
+        ],
+        "scope": {
+            "scopeConditions": []
+        },
+        "policyEnforcements": [
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "a8400f80-e08f-4f4e-bdd9-9241e9a60cf9",
+                        "order": null
+                    }
+                ],
+                "stageKey": "routing"
+            },
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "96d08056-ad33-4c5d-bfb7-debf9dbe3c7e",
+                        "order": null
+                    }
+                ],
+                "stageKey": "IAM"
+            },
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "e2944292-e8ab-4b4e-a970-2285170e46d2",
+                        "order": null
+                    }
+                ],
+                "stageKey": "transport"
+            }
+        ],
+        "policyScope": "SERVICE",
+        "global": false,
+        "active": false,
+        "systemPolicy": false
+    }
+}
+
+
+
+
+RESPONSE PAYLOAD
+
+{
+    "policy": {
+        "id": "18821d71-5b36-46f0-bd26-c40bf8e5208a",
+        "names": [
+            {
+                "value": "Default Policy for API MessengerApi",
+                "locale": "English"
+            }
+        ],
+        "descriptions": [
+            {
+                "value": "",
+                "locale": "English"
+            }
+        ],
+        "scope": {
+            "scopeConditions": []
+        },
+        "policyEnforcements": [
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "a8400f80-e08f-4f4e-bdd9-9241e9a60cf9",
+                        "order": null
+                    }
+                ],
+                "stageKey": "routing"
+            },
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "96d08056-ad33-4c5d-bfb7-debf9dbe3c7e",
+                        "order": null
+                    }
+                ],
+                "stageKey": "IAM"
+            },
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "e2944292-e8ab-4b4e-a970-2285170e46d2",
+                        "order": null
+                    }
+                ],
+                "stageKey": "transport"
+            }
+        ],
+        "policyScope": "SERVICE",
+        "global": false,
+        "active": false,
+        "systemPolicy": false
+    }
+}

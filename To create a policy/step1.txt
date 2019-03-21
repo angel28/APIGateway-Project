@@ -1,0 +1,48 @@
+
+
+  GET--    http://localhost:5555/rest/apigateway/apis
+
+
+
+{
+    "apiResponse": [
+        {
+            "api": {
+                "apiName": "API Gateway Alias Management Service",
+                "apiVersion": "10.4",
+                "apiDescription": "API Gateway Alias Management Service allows you to manage aliases in the API Gateway. Any user with the 'Manage aliases' functional previlige can manage the aliases in API Gateway. By default, the users who are part of API-Gateway-Administrators group will have this privilege. \n\n An alias in API Gateway holds environment-specific property values that can be used in policy routing configurations. The aliases can be referred to in routing endpoints, routing rules, endpoint connection properties, outbound authentication tokens, and outbound HTTP headers instead of providing an actual value. The corresponding alias value based on the stage is obtained and is substituted in place of an alias name during run-time. Thus the same alias can be referred to in multiple policies and the change in a particular alias would affect all the policy properties in which it is being referred. \n\n There are mainly six types of alias \n 1. Simple alias - Holds a simple value \n 2. Endpoint alias - Holds the endpoint value along with additional properties such as connection timeout, read timeout, whether to pass security headers or not, keystore alias, key alias \n 3. HTTP Transport security alias - Contains the transport level security information required while accessing the native API. Used in the outbound policies \n 4. SOAP message security alias - Contains message level security information that is required to access the native API \n 5. webMethods Integration Server alias - Holds the ESB service value. Can be used in the Invoke webMethods IS policy for request and response processing.\n 6. Transformation alias - Holds a list of XSLT style sheets. Can be used in the XSLT Transformation policies for request and response processing.\n\n In addition to the above alias types, the configurations for \n SAML issuer - which holds the configuration to communicate to STS (Security Token Service) to retrieve the SAML token. Used in the Outbound policies, \n Authorization server - which holds configuration of authorization server(internal/external)for introspection/Dynamic client registration. Used in the token validation and OAuth2 client creation, \n Client metadata mapping - which holds the authorization service provider metadata information. Used in the Dynamic client registration for the authorization server alias and \n Service Registry- which holds registry endpoint and service paths information. Used in the client side and server side discovery \n are internally stored as aliases.",
+                "isActive": false,
+                "type": "REST",
+                "publishedPortals": [],
+                "systemVersion": 1,
+                "id": "02e782df-d281-4204-b489-80dd96b8dac7"
+            },
+            "responseStatus": "SUCCESS"
+        },
+        {
+            "api": {
+                "apiName": "API Gateway Application Management Service",
+                "apiVersion": "10.4",
+                "apiDescription": "API Gateway Application Management Service allows you to manage the Applications in API Gateway. Any user with the 'Manage applications' functional privilege can manage the APIs in the API Gateway. By default, the users who are part of either API-Gateway-Providers or API-Gateway-Administrators groups will have this privilege.\n\n An application defines the precise identifiers by which messages from a particular consumer application is recognized at run time. The identifiers can be, for example, user name in HTTP headers, a range of IP addresses, such that API Gateway can identify or authenticate the consumers that are requesting an API.\n\n. The ability of API Gateway to relate a request to a specific consumer application enables it to:\n\n 1. Control access to an API at run time (that is, allow only authorized consumer applications to invoke an API).\n\n 2. Monitor an API for violations of a Service-Level Agreement (SLA) for a specified application.\n\n 3. Indicate the consumer application to which a logged transaction event belongs.\n\n\n\n An application has the following attributes for specifying the identifiers:\n\n 1. IP address, which specifies one or more IP addresses that identify requests from a particular consumer application. Example: 192.168.0.10\n\n This attribute is queried when the Identify and Authorize Application policy is configured to identify consumer applications by IP address.\n\n 2. JWT claims set, which specifies one or more claims that identify requests from a particular consumer application. The claims are a set of name-value pairs that provide sufficient information about the application. Example: sub = Administrator.\n\n This attribute is queried when the Identify and Authorize Application policy is configured to identify consumer applications by JSON Web Token (JWT).\n\n 3. Consumer certificate, which specifies the X.509 certificates that identify requests from a particular consumer.\n\n This attribute is queried when the Identify and authenticate consumer policy is configured to identify the consumer applications by a consumer certificate.\n\n 4. Identification token, which specifies the host names, user names or other distinguishing strings that identify requests from a particular consumer application.\n\n This attribute is queried when the Identify and authenticate consumer policy action is configured to identify consumer applications by host name, HTTP user name, and WSS user name.\n\n \n\n As an API provider or an API Gateway Administrator you can create and manage applications, and register applications with the APIs.\n\n These are the high level stages of managing and using an application:\n\n 1. API developers request the API Gateway administrators to create an application for access as per the required identification criteria.\n\n 2. API Gateway provider or administrator validates the request and creates a new application, there by provisioning the application specific access tokens (API access key and OAuth credentials).\n\n 3. API Developer, upon finding a suitable API, sends a request to API Gateway for consumption by providing the application details.\n\n 4. After validating the request, API Gateway provider or administrator associates the application with the API. Keys are generated for applications and not for every API that the application consumes. \n\n Note:  The approval process, if any, is handled by the requesting application and not handled by API Gateway.\n\n 5. The API developer can then use the application with the proper identifier (such as the access key or identifier) to access the API. \n\n Strategies: \n\n A strategy is a way to authenticate the incoming request and provides multiple authentication mechanisms or multiple authorization servers for a single authentication scheme. API Gateway identifies the application and validates the token submitted through the strategy configured in the application. You can create multiple strategies authorized by an API for an application. For example, in case of OAuth authentication scheme, you want the application to support both OKTA and PINGFederate or OKTA with multiple tenants. This can be configured as OAuth strategy for the application.",
+                "isActive": false,
+                "type": "REST",
+                "publishedPortals": [],
+                "systemVersion": 1,
+                "id": "2f8d2bc6-d73b-4357-b76d-af74620b4b64"
+            },
+            "responseStatus": "SUCCESS"
+        },
+        {
+            "api": {
+                "apiName": "MessengerApi",
+                "apiVersion": "1.0",
+                "isActive": true,
+                "type": "REST",
+                "publishedPortals": [],
+                "systemVersion": 1,
+                "id": "72e18d0b-2800-4e67-950b-5c81b57c97ee"
+            },
+            "responseStatus": "SUCCESS"
+        }
+    ]
+}
