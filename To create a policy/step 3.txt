@@ -1,6 +1,10 @@
 
 
-        
+
+      GET--    http://localhost:5555/rest/apigateway/policies/18821d71-5b36-46f0-bd26-c40bf8e5208a
+
+
+
 
 
 {
@@ -34,15 +38,6 @@
             {
                 "enforcements": [
                     {
-                        "enforcementObjectId": "6edb3871-639b-42ae-ac0f-9bda40e2ba73",
-                        "order": null
-                    }
-                ],
-                "stageKey": "IAM"
-            },
-            {
-                "enforcements": [
-                    {
                         "enforcementObjectId": "e2944292-e8ab-4b4e-a970-2285170e46d2",
                         "order": null
                     }
@@ -51,8 +46,8 @@
             }
         ],
         "policyScope": "SERVICE",
-        "global": false,
         "active": false,
+        "global": false,
         "systemPolicy": false
     }
 }
