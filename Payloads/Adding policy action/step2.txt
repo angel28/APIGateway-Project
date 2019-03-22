@@ -1,0 +1,316 @@
+
+GET
+http://localhost:5555/rest/apigateway/apis/9e7db103-af5e-4f78-92c2-75b3b59006d3
+{
+    "apiResponse": {
+        "api": {
+            "apiDefinition": {
+                "type": "rest",
+                "info": {
+                    "version": "1.0",
+                    "title": "AppMessenger"
+                },
+                "serviceRegistryDisplayName": "AppMessenger_1.0",
+                "schemes": [],
+                "security": [],
+                "paths": {
+                    "/messages": {
+                        "get": {
+                            "description": "This method is used to retrieve all the messages",
+                            "operationId": "getMessage",
+                            "parameters": [
+                                {
+                                    "in": "query",
+                                    "name": "messageId",
+                                    "parameterSchema": {
+                                        "type": "string"
+                                    },
+                                    "required": true,
+                                    "type": "string"
+                                }
+                            ],
+                            "responses": {
+                                "200": {
+                                    "description": "This status indicates that a list of available messages is retrieved successfully",
+                                    "content": {
+                                        "application/json": {
+                                            "schema": {
+                                                "type": "gateway"
+                                            },
+                                            "examples": {},
+                                            "example": "[\n    {\n        \"message\": \"hii\",\n        \"messageId\": 1,\n        \"sender\": \"salu\"\n    },\n    {\n        \"message\": \"hello\",\n        \"messageId\": 2,\n        \"sender\": \"heebu\"\n    }\n]"
+                                        }
+                                    },
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                },
+                                "401": {
+                                    "description": "This status code indicates that either user didn't provide right credentials or user doesn't have required privileges to access this API.\n",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                }
+                            },
+                            "mockedResponses": {},
+                            "mockedConditionsBasedCustomResponsesList": [],
+                            "enabled": true,
+                            "scopes": [],
+                            "requestBody": {
+                                "content": {},
+                                "name": "getMessage"
+                            }
+                        },
+                        "post": {
+                            "description": "This method is used to create a new message",
+                            "operationId": "addMessage",
+                            "responses": {
+                                "200": {
+                                    "description": "This status code indicates that a message has been created successfully",
+                                    "content": {
+                                        "application/json": {
+                                            "schema": {
+                                                "type": "gateway"
+                                            },
+                                            "examples": {},
+                                            "example": "{\n    \"message\": \"hurray\",\n    \"messageId\": 3,\n    \"sender\": \"saluma\"\n}"
+                                        }
+                                    },
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                },
+                                "401": {
+                                    "description": "This status code indicates that either user didn't provide right credentials or user doesn't have required privileges to access this API",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                }
+                            },
+                            "mockedResponses": {},
+                            "mockedConditionsBasedCustomResponsesList": [],
+                            "enabled": true,
+                            "scopes": [],
+                            "requestBody": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "type": "gateway"
+                                        },
+                                        "examples": {},
+                                        "example": "{\n        \"message\":\"hurray\",\n        \"sender\":\"saluma\"\n    }"
+                                    }
+                                },
+                                "name": "addMessage"
+                            }
+                        },
+                        "scopes": [],
+                        "displayName": "/messages",
+                        "enabled": true
+                    },
+                    "/messages/{messageId}": {
+                        "get": {
+                            "description": "This method is used to retrieve a specified message",
+                            "operationId": "getMessageById",
+                            "responses": {
+                                "200": {
+                                    "description": "This status code indicates that a specified message has been retrieved successfully",
+                                    "content": {
+                                        "application/json": {
+                                            "schema": {
+                                                "type": "gateway"
+                                            },
+                                            "examples": {},
+                                            "example": "{\n    \"message\": \"wassup\",\n    \"messageId\": 3,\n    \"sender\": \"reshu\"\n}"
+                                        }
+                                    },
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                },
+                                "401": {
+                                    "description": "This status code indicates that either user didn't provide right credentials or user doesn't have required privileges to access this API",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                }
+                            },
+                            "mockedResponses": {},
+                            "mockedConditionsBasedCustomResponsesList": [],
+                            "enabled": true,
+                            "scopes": [],
+                            "requestBody": {
+                                "content": {},
+                                "name": "getMessageById"
+                            }
+                        },
+                        "put": {
+                            "description": "This method is used to update a specified message",
+                            "operationId": "updateMessage",
+                            "responses": {
+                                "200": {
+                                    "description": "This status indicates that a message has been updated successfully",
+                                    "content": {
+                                        "application/json": {
+                                            "schema": {
+                                                "type": "gateway"
+                                            },
+                                            "examples": {},
+                                            "example": "{\n    \"message\": \"wassup\",\n    \"messageId\": 3,\n    \"sender\": \"reshma\"\n}"
+                                        }
+                                    },
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                },
+                                "401": {
+                                    "description": "This status code indicates that either user didn't provide right credentials or user doesn't have required privileges to access this API",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                }
+                            },
+                            "mockedResponses": {},
+                            "mockedConditionsBasedCustomResponsesList": [],
+                            "enabled": true,
+                            "scopes": [],
+                            "requestBody": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "type": "gateway"
+                                        },
+                                        "examples": {},
+                                        "example": " {\n       \"message\": \"wassup\",\n        \"sender\": \"reshma\"\n        }"
+                                    }
+                                },
+                                "name": "updateMessage"
+                            }
+                        },
+                        "delete": {
+                            "description": "This method is used to delete a message from the list of messages",
+                            "operationId": "deleteMessage",
+                            "responses": {
+                                "204": {
+                                    "description": "This status code indicates that a message has been deleted successfully",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                },
+                                "401": {
+                                    "description": "This status code indicates that either user didn't provide right credentials or user doesn't have required privileges to access this API",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                },
+                                "404": {
+                                    "description": "This status indicates that the specified resource is not found",
+                                    "content": {},
+                                    "links": {},
+                                    "schema": {},
+                                    "examples": {},
+                                    "headers": {}
+                                }
+                            },
+                            "mockedResponses": {},
+                            "mockedConditionsBasedCustomResponsesList": [],
+                            "enabled": true,
+                            "scopes": [],
+                            "requestBody": {
+                                "content": {},
+                                "name": "deleteMessage"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "messageId",
+                                "parameterSchema": {
+                                    "type": "string"
+                                },
+                                "required": false,
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "type": "string"
+                            }
+                        ],
+                        "scopes": [],
+                        "displayName": "/messages/{messageId}",
+                        "enabled": true
+                    }
+                },
+                "securityDefinitions": {},
+                "definitions": {},
+                "parameters": {},
+                "baseUriParameters": [],
+                "externalDocs": [],
+                "servers": [
+                    {
+                        "url": "http://localhost:8089/AppMessenger/webapi",
+                        "variables": {}
+                    }
+                ],
+                "components": {
+                    "schemas": {},
+                    "responses": {},
+                    "parameters": {},
+                    "examples": {},
+                    "requestBodies": {},
+                    "headers": {},
+                    "links": {},
+                    "callbacks": {}
+                }
+            },
+            "nativeEndpoint": [
+                {
+                    "passSecurityHeaders": true,
+                    "uri": "http://localhost:8089/AppMessenger/webapi",
+                    "connectionTimeoutDuration": 0,
+                    "alias": false
+                }
+            ],
+            "apiName": "AppMessenger",
+            "apiVersion": "1.0",
+            "maturityState": "Beta",
+            "isActive": true,
+            "type": "REST",
+            "owner": "Administrator",
+            "policies": [
+                "6bb201be-06a0-475f-842a-9a81245a3e98"
+            ],
+            "scopes": [],
+            "publishedPortals": [],
+            "creationDate": "2019-03-18 05:23:51 GMT",
+            "lastModified": "2019-03-21 11:11:34 GMT",
+            "systemVersion": 1,
+            "id": "9e7db103-af5e-4f78-92c2-75b3b59006d3"
+        },
+        "responseStatus": "SUCCESS",
+        "gatewayEndPoints": [
+            "http://SAG-6HYB152:5555/gateway/AppMessenger/1.0"
+        ],
+        "versions": [
+            {
+                "versionNumber": "1.0",
+                "apiId": "9e7db103-af5e-4f78-92c2-75b3b59006d3"
+            }
+        ]
+    }
+}

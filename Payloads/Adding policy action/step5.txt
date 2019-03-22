@@ -1,0 +1,101 @@
+URL:http://localhost:5555/rest/apigateway/policies/6bb201be-06a0-475f-842a-9a81245a3e98
+PUT
+
+Request:
+{
+    "policy": {
+        "id": "6bb201be-06a0-475f-842a-9a81245a3e98",
+        "names": [
+            {
+                "value": "Default Policy for API AppMessenger",
+                "locale": "English"
+            }
+        ],
+        "descriptions": [
+            {
+                "value": "",
+                "locale": "English"
+            }
+        ],
+        "scope": {
+            "scopeConditions": []
+        },
+        "policyEnforcements": [
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "078610c9-50ab-4599-b9aa-c25960a7ce6a",
+                        "order": null
+                    },
+                     {
+                        "enforcementObjectId": "bf1fd0be-6b20-47f5-8bc5-c00bac219a44",
+                        "order": null
+                    }
+                ],
+                "stageKey": "routing"
+            },
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "7bb6bc4d-d132-4ce0-b4f7-64f51bacb074",
+                        "order": null
+                    }
+                ],
+                "stageKey": "transport"
+            }
+        ],
+        "policyScope": "SERVICE",
+        "global": false,
+        "active": false,
+        "systemPolicy": false
+    }
+}
+Response:
+{
+    "policy": {
+        "id": "6bb201be-06a0-475f-842a-9a81245a3e98",
+        "names": [
+            {
+                "value": "Default Policy for API AppMessenger",
+                "locale": "English"
+            }
+        ],
+        "descriptions": [
+            {
+                "value": "",
+                "locale": "English"
+            }
+        ],
+        "scope": {
+            "scopeConditions": []
+        },
+        "policyEnforcements": [
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "078610c9-50ab-4599-b9aa-c25960a7ce6a",
+                        "order": null
+                    },
+                     {
+                        "enforcementObjectId": "bf1fd0be-6b20-47f5-8bc5-c00bac219a44",
+                        "order": null
+                    }
+                ],
+                "stageKey": "routing"
+            },
+            {
+                "enforcements": [
+                    {
+                        "enforcementObjectId": "7bb6bc4d-d132-4ce0-b4f7-64f51bacb074",
+                        "order": null
+                    }
+                ],
+                "stageKey": "transport"
+            }
+        ],
+        "policyScope": "SERVICE",
+        "global": false,
+        "active": false,
+        "systemPolicy": false
+    }
+}
